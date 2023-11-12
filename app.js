@@ -1,6 +1,4 @@
-const add = document.querySelector(".add-btn");
-const check = document.querySelector(".check-btn");
-
+// ? ADD DATE-AMOUNT-AREA PART TO TABLE
 const walletForm = document
   .querySelector(".walletForm")
   .addEventListener("submit", (event) => {
@@ -8,25 +6,30 @@ const walletForm = document
     console.log(event.target);
 
     const date = document.querySelector("#date").value;
-    const amount = document.querySelector("#amount").value;
-    const area = +document.querySelector("#area").value;
-    console.log(date, amount, area);
+    const amount = Number(document.querySelector("#amount").value);
+    const area = document.querySelector("#area").value;
 
     document.querySelector(".walletForm").reset();
     addElement(date, amount, area);
+    const myArr = [];
+    let info = { date: date, amountMoney: amount, spendingArea: area };
+    myArr.push(info);
+    localStorage.setItem("info", JSON.stringify(myArr));
   });
 
+// ? REVENUE PART
 const revenueForm = document
   .querySelector(".revenueForm")
   .addEventListener("submit", (event) => {
     event.preventDefault();
-    const revenue = +document.querySelector("#revenue").value;
+    const revenue = Number(document.querySelector("#revenue").value);
     console.log(revenue);
 
-    
-    document.querySelector(".revenueForm").reset();addResult(revenue)
+    document.querySelector(".revenueForm").reset();
+    addResult(revenue);
   });
 
+// ? ADD NEW ELEMENT TO TABLE
 function addElement(date, amount, area) {
   let row = document.createElement("tr");
 
@@ -42,20 +45,19 @@ function addElement(date, amount, area) {
 
   row.append(dateT, amountT, areaT, process);
   document.querySelector("#spend-body").appendChild(row);
+
 }
 
-function addResult(revenue){
-    let revenueT=document.querySelector("#total")
-    revenueT.textContent=formattedCurrency(revenue)
+function addResult(revenue) {
+  let revenueT = document.querySelector("#total");
+  revenueT.textContent = formattedCurrency(revenue);
 }
-
 
 // Formatting as currency
-function formattedCurrency(number){
-  let formattedNumber=number.toLocaleString("en-US", {
+function formattedCurrency(number) {
+  let formattedNumber = number.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
   });
-  return formattedNumber
-};
-
+  return formattedNumber;
+}
