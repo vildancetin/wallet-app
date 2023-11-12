@@ -66,6 +66,54 @@
               </div>
             </div>
           </form>
+
+          <table
+          id="spend-table"
+          class="table table-bordered table-hover table-striped mt-4 text-center"
+        >
+          <thead>
+            <tr>
+              <th scope="col" class="w-25">Date</th>
+              <th scope="col" class="w-50">Spending Area</th>
+              <th scope="col">Amount of Money</th>
+              <th scope="col">Process</th>
+            </tr>
+          </thead>
+          <tbody id="spend-body">
+            <!-- <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <table
+        id="result-table"
+        class="table table-bordered table-hover table-striped mt-4 text-center w-50 ms-auto"
+      >
+        <tbody class="text-end">
+          <tr>
+            <th>Total Money  :</th>
+            <td id="total" style="width: 100px;">0</td>
+          </tr>
+          <tr>
+            <th>Your Expense :</th>
+            <td id="expense">0</td>
+          </tr>
+          <tr>
+            <th id="resth">Rest :</th>
+            <td id="rest">0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="text-center">
+        <button id="clear-btn" class="btn btn-secondary">
+          Clear
+        </button>
+      </section>
         </main>
       </div>
     </div>
