@@ -10,21 +10,63 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <aside class="col-3 bg-color">
-            <ul class="d-flex justify-content-center flex-column gap-3 my-5">
-                <li><a href="#">Home</a></li>
-                <li><a href="add.html">Add</a></li>
-                <li><a href="">Card</a></li>            
-            </ul>
+          <ul class="d-flex justify-content-center flex-column gap-3 my-5">
+            <li><a href="#">Home</a></li>
+            <li><a href="add.html">Add</a></li>
+            <li><a href="">Card</a></li>
+          </ul>
         </aside>
-        
-        <main class="col-9">
 
+        <main class="col-9">
+          <form class="row g-3 bg-color m-2 pb-4">
+            <div class="col-md-6">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" />
+            </div>
+            <div class="col-md-6">
+              <label for="amount" class="form-label">Amount of Money</label>
+              <input type="number" class="form-control" id="amount" />
+            </div>
+            <div class="col-12">
+              <label for="area" class="form-label">Spending Area</label>
+              <div class="d-flex gap-2">
+              <input
+                class="form-control"
+                list="datalistOptions"
+                id="area"
+                placeholder="Type to search..."
+              /> 
+              <button type="submit" class="btn btn-primary">Add</button>                
+              </div>
+
+              <datalist id="datalistOptions">
+                <option value="Housing"></option>
+                <option value="Food"></option>
+                <option value="Transportation"></option>
+                <option value="Bills"></option>
+                <option value="Education"></option>
+                <option value="Entertainment"></option>
+                <option value="Saving Money"></option>
+                <option value="Technology"></option>
+              </datalist>
+
+             
+            </div>
+
+            <div class="col-12">
+              <label for="revenue" class="form-label">Revenue</label>
+              <div class="d-flex gap-2">
+                <input type="number" class="form-control" id="revenue" />
+                <button type="submit" class="btn btn-primary">Check</button>
+              </div>
+            </div>
+          </form>
         </main>
       </div>
     </div>
