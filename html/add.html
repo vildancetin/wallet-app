@@ -23,47 +23,46 @@
           </ul>
         </aside>
 
-        <main class="col-9 mt-5 ">
-          <form class="row g-3 bck m-2 pb-4 rounded">
-            <div class="col-md-6">
-              <label for="date" class="form-label">Date</label>
-              <input type="date" class="form-control" id="date" />
-            </div>
-            <div class="col-md-6">
-              <label for="amount" class="form-label">Amount of Money</label>
-              <input type="number" class="form-control" id="amount" />
-            </div>
-            <div class="col-12">
-              <label for="area" class="form-label">Spending Area</label>
-              <div class="d-flex gap-2">
-              <input
-                class="form-control"
-                list="datalistOptions"
-                id="area"
-                placeholder="Type to search..."
-              /> 
-              <button type="submit" class="btn add-btn">Add</button>                
+        <main class="col-9 mt-5 bck p-2">
+          <form class="row g-3 m-2 pb-4 rounded walletForm">
+              <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" />
               </div>
+              <div class="col-md-6">
+                <label for="amount" class="form-label">Amount of Money</label>
+                <input type="number" class="form-control" id="amount" />
+              </div>
+              <div class="col-12">
+                <label for="area" class="form-label">Spending Area</label>
+                <div class="d-flex gap-2">
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="area"
+                    placeholder="Type to search..."
+                  />
+                  <button type="submit" class="btn add-btn">Add</button>
+                </div>
+                <datalist id="datalistOptions">
+                  <option value="Housing"></option>
+                  <option value="Food"></option>
+                  <option value="Transportation"></option>
+                  <option value="Bills"></option>
+                  <option value="Education"></option>
+                  <option value="Entertainment"></option>
+                  <option value="Saving Money"></option>
+                  <option value="Technology"></option>
+                </datalist>
+              </div>
+          </form>
 
-              <datalist id="datalistOptions">
-                <option value="Housing"></option>
-                <option value="Food"></option>
-                <option value="Transportation"></option>
-                <option value="Bills"></option>
-                <option value="Education"></option>
-                <option value="Entertainment"></option>
-                <option value="Saving Money"></option>
-                <option value="Technology"></option>
-              </datalist>
-
-             
-            </div>
-
+          <form class="row g-3 m-2 pb-4 rounded revenueForm">
             <div class="col-12">
               <label for="revenue" class="form-label">Revenue</label>
               <div class="d-flex gap-2">
                 <input type="number" class="form-control" id="revenue" />
-                <button type="submit" class="btn check-btn">Check</button>
+                <button type="submit" class="btn check-btn">Save</button>
               </div>
             </div>
           </form>
@@ -76,5 +75,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="../app.js"></script>
   </body>
 </html>
