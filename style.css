@@ -4,7 +4,7 @@
 
 .bck{
     background: rgba(229, 97, 20, 0.671);
-    background: linear-gradient(180deg, rgba(229, 97, 20, 0.527) 0%, rgba(129,149,203,1) 63%, rgba(110, 191, 30, 0.521) 100%);
+    background: linear-gradient(180deg, rgba(229, 97, 20, 0.527) 0%, rgba(129,149,203,1) 63%, rgba(110, 191, 30, 0.521) 100%); 
 }
 body{
     background: rgba(229, 97, 20, 0.377);
